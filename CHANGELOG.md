@@ -2,7 +2,7 @@
 
 ## 0.4.3
 
-- 依 HACS 審查要求移除整合 manifest 的 Pillow 宣告，沿用 Home Assistant 內建 Pillow；保留 NumPy 依賴。
+- 依 HACS 審查要求移除整合 manifest 的 Pillow 宣告，沿用 Home Assistant 內建 Pillow；NumPy 改為最低版本 >=2.3.2，遵循最新 hassfest 規則及 Core 相依版本。
 - 獨立帳單監測流程明確安裝 Pillow，維持非 Home Assistant 環境的 OCR 功能。
 
 ## 0.4.2

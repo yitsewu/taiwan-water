@@ -8,6 +8,6 @@
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/yitsewu/taiwan-water/issues",
-  "requirements": ["numpy==2.3.2"],
+  "requirements": ["numpy>=2.3.2"],
   "version": "0.4.3"
 }
