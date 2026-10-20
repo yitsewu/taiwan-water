@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## 0.4.3
+
+- 依 HACS 審查要求移除整合 manifest 的 Pillow 宣告，沿用 Home Assistant 內建 Pillow；保留 NumPy 依賴。
+- 獨立帳單監測流程明確安裝 Pillow，維持非 Home Assistant 環境的 OCR 功能。
+
 ## 0.4.2
 
 - 修正英數混合水號的帳單詳細按鈕無法辨識、誤報網站格式變更的問題。
