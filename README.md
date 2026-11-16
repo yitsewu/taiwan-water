@@ -1,7 +1,5 @@
-# HACS 台灣自來水公司帳單匯入
+# 台灣自來水公司帳單匯入
 
-[![Open your Home Assistant instance and open a repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=yitsewu&repository=taiwan-water&category=integration)
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![爬蟲測試](https://img.shields.io/github/actions/workflow/status/yitsewu/taiwan-water/live-check.yaml?branch=main&label=%E7%88%AC%E8%9F%B2%E6%B8%AC%E8%A9%A6)](https://github.com/yitsewu/taiwan-water/actions/workflows/live-check.yaml)
 
@@ -21,12 +19,24 @@
 
 ## 安裝
 
-需要 **Home Assistant 2026.9.1 以上**。已驗證 Core 2026.9.1 的 amd64／aarch64；其他版本及 32 位元平台尚未驗證。
+需要 **Home Assistant 2026.9.1 以上**。已驗證 Core 2026.9.1 的 amd64／aarch64；2026.11.1 已確認市集安裝識別與載入；不代表所有平台與功能均重測，32 位元平台尚未驗證。
 
-**HACS**
+**Home Assistant 2026.11 以上：Marketplace**
 
-1. 先安裝 HACS，點頁首按鈕開啟儲存庫；也可在 HACS「自訂儲存庫」加入 `https://github.com/yitsewu/taiwan-water`，類型選「整合」。
-2. 下載整合，重新啟動 Home Assistant。
+1. 開啟「設定 → Marketplace → 瀏覽」，搜尋「台灣自來水公司」，核對來源為 `yitsewu/taiwan-water`，安裝整合。
+2. 依畫面提示重新啟動 Home Assistant，再到「設定 → 裝置與服務 → 新增整合」設定帳戶。
+
+本專案已收錄於預設目錄，無需新增自訂儲存庫。Marketplace 是社群套件管理入口；收錄不代表 Home Assistant 或公用事業官方審查、支援或背書。
+
+**Home Assistant 2026.9.1–2026.10：HACS**
+
+在 HACS 搜尋「台灣自來水公司」，下載後重新啟動 HA，再新增整合。此版本範圍仍使用 HACS。
+
+**既有使用者與更新**
+
+HA 2026.11 啟動時會將既有 HACS 內容遷移至 Marketplace；不要重新安裝舊 HACS。先在 Marketplace「已安裝」確認本整合，再從套件頁面或更新通知更新，依提示重新啟動。更新前備份 HA 設定與 Recorder 資料庫；保留原整合帳戶、帳單儲存資料與統計，不要刪除帳戶再新增。更新後核對既有帳戶、查詢狀態及能源歷史。
+
+[官方 Marketplace 與遷移說明](https://www.home-assistant.io/integrations/marketplace/)。最低 HA 版本仍為 2026.9.1；改用 Marketplace 不需要更換本整合 domain。
 
 **ZIP 安裝**
 

@@ -1,9 +1,7 @@
-# HACS — Taiwan Water Corporation bill import
+# Taiwan Water Corporation bill import
 
 [繁體中文](../README.md)
 
-[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=yitsewu&repository=taiwan-water&category=integration)
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](../LICENSE)
 [![Crawler test](https://img.shields.io/github/actions/workflow/status/yitsewu/taiwan-water/live-check.yaml?branch=main&label=Crawler%20test)](https://github.com/yitsewu/taiwan-water/actions/workflows/live-check.yaml)
 
@@ -23,12 +21,24 @@ This is an unofficial integration for Taiwan Water Corporation. It does not supp
 
 ## Installation
 
-Requires **Home Assistant 2026.9.1 or later**. Core 2026.9.1 has been tested on amd64 and aarch64; other versions and 32-bit platforms have not been verified.
+Requires **Home Assistant 2026.9.1 or later**. Core 2026.9.1 has been tested on amd64 and aarch64; Marketplace identity and loading were verified on 2026.11.1; this is not a full platform/function retest. 32-bit platforms remain unverified.
 
-**HACS**
+**Home Assistant 2026.11 and later: Marketplace**
 
-1. Install HACS, then use the button above. Alternatively, add `https://github.com/yitsewu/taiwan-water` under HACS → Custom repositories and select **Integration**.
-2. Download the integration and restart Home Assistant.
+1. Open **Settings → Marketplace → Browse**, search for **台灣自來水公司**, and verify `yitsewu/taiwan-water` before installing.
+2. Restart HA when prompted, then use **Settings → Devices & services → Add integration** to set up an account.
+
+The repository is in the default catalog; no custom repository is required. Catalog inclusion does not imply official review or endorsement.
+
+**Home Assistant 2026.9.1–2026.10: HACS**
+
+Search HACS for **台灣自來水公司**, download, restart HA, then add the integration.
+
+**Existing installations and updates**
+
+HA 2026.11 migrates HACS content to Marketplace at startup. Do not reinstall legacy HACS. Check **Installed**, then update from the repository page or update notification and restart when prompted. Back up HA configuration and the Recorder database first. Keep the existing integration account, saved bills and statistics; do not delete and recreate the account. Verify query status and Energy history afterward.
+
+See the [official Marketplace migration guide](https://www.home-assistant.io/integrations/marketplace/). The minimum HA version remains 2026.9.1 and the integration domain is unchanged.
 
 **ZIP installation**
 

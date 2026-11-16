@@ -1,14 +1,14 @@
 # 台灣自來水公司：Home Assistant／HACS 整合
 
-版本：`0.4.0`，初版測試套件，最低 Home Assistant `2026.9.1`。適用台灣自來水公司水費查詢；不適用臺北自來水事業處。
+最低 Home Assistant `2026.9.1`。適用台灣自來水公司水費查詢；不適用臺北自來水事業處。
 
 輸入水號與戶名後，由 HA 直接查詢官方網站，提供帳單、歷史分攤、排程與狀態感測器。OCR 與模型已內建，全部在使用者自己的 HA Core 執行，不需附加元件、container、OCR 網址或手動下載模型。 [English installation guide](README.en.md)。
 
 ## 安裝
 
-可透過 HACS 自訂儲存庫或 ZIP 安裝。
+可透過 Marketplace（HA 2026.11 以上）或 HACS 預設目錄（2026.9.1–2026.10）或 ZIP 安裝。
 
-1. HACS：「自訂儲存庫」加入 `https://github.com/yitsewu/taiwan-water`，類型選 Integration，下載後依正常流程重新啟動 HA。也可使用 ZIP，將完整 `custom_components/taiwater`（含 `models`）放入 HA `/config/custom_components/`。
+1. 依[首頁安裝與遷移步驟](../README.md#安裝)，在 Marketplace 或 HACS 搜尋台灣自來水公司，下載後依畫面提示重新啟動 HA。也可使用 ZIP，將完整 `custom_components/taiwater`（含 `models`）放入 HA `/config/custom_components/`。
 2. 「設定 → 裝置與服務 → 新增整合 → 台灣自來水公司」，填水號、戶名及顯示名稱。首次查詢自動載入內建模型。
 3. 在整合選項調整排程、歷史期數、分攤方式及碳排係數。無需任何額外 OCR 安裝步驟。
 
